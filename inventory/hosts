@@ -1,0 +1,23 @@
+#
+# Declare our hosts individually first, for clarity and to
+# assign connection host variables ( now we can use the alias
+# "node04" instead of tr-node04.training.edgecloud.com )
+#
+
+node01 ansible_host=student05-node01.training.edgecloud.com
+node02 ansible_host=student05-node02.training.edgecloud.com
+node03 ansible_host=student05-node03.training.edgecloud.com
+node04 ansible_host=student05-node04.training.edgecloud.com
+node05 ansible_host=student05-node05.training.edgecloud.com
+node06 ansible_host=student05-node06.training.edgecloud.com
+node07 ansible_host=student05-node07.training.edgecloud.com
+node08 ansible_host=student05-node08.training.edgecloud.com
+
+#
+# Now some groups..  We will just start with geographic breakdowns:
+#
+
+[nyc]
+node[01:04]
+[sfo]
+node[05:08]
